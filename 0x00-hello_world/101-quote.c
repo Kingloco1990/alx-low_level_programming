@@ -10,6 +10,6 @@ int main(void)
 	int year = 2015;
 	int month = 10;
 	int day = 19;
-	fprintf(stderr, "%s\"- %s, %d-%d-%d\n",str_1,name,year,month,day);
+	fprintf(stderr, "%s\"- %s, %d-%d-%d \n", str_1, name, year, month, day);
 	return (1);
 }
