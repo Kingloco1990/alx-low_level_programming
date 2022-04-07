@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- *main - this is a function and any code in its {} will be executed
+ *main - execution and termination of program
  *Return 0 - ends the main function
  */
 int main(void)
