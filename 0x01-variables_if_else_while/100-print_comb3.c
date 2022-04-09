@@ -22,7 +22,7 @@ int main(void)
 				{
 					break;
 				}
-				
+
 				putchar(',');
 				putchar(' ');
 			}
@@ -32,4 +32,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-}	
+}
