@@ -7,23 +7,24 @@
  */
 int main(void)
 {
-	int digit;
-	int number;
+	int i, j;
 
-	for (digit = '0'; digit <= '9'; digit++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		for (number = '0'; number <= '9'; number++)
+		for (j = '0'; j <= '9'; J++)
 		{
-			if (digit < number)
+			if (i < j && i != '9')
 			{
-				putchar(digit);
-				putchar(number);
+				putchar(i);
+				putchar(j);
 
-				if (digit != '8' || (digit == '8' && number != '9'))
+				if (i == '8' && j == '9')
 				{
-					putchar(',');
-					putchar(' ');
+					break;
 				}
+				
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
@@ -31,4 +32,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-}
+}	
