@@ -21,17 +21,15 @@ int main(void)
 
 			if (digit == 98 && number == 99)
 			{
-			       	continue;
+				continue;
 			}
 
-			putchar(',');
-
+			utchar(',');
 			putchar(' ');
 		}
 	}
 
-
 	putchar('\n');
-	
+
 	return (0);
 }
