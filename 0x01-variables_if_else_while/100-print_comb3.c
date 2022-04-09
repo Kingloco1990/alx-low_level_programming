@@ -10,9 +10,9 @@ int main(void)
 	int digit;
 	int number;
 
-	for (digit = '0'; digit < '9'; digit++)
+	for (digit = '0'; digit < '10'; digit++)
 	{
-		for (number = '0'; number < '9'; number++)
+		for (number = '0'; number < '10'; number++)
 		{
 			if (digit < number)
 			{
@@ -29,4 +29,4 @@ int main(void)
 	}
 
 	return (0);
-}
+i}
