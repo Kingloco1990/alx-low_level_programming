@@ -22,11 +22,12 @@ int main(void)
 			if (digit == 98 && number == 99)
 			{
 				 continue;
-				 putchar(',');
-				 putchar(' ');
 			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
 
 	putchar('\n');
 
