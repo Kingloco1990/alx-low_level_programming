@@ -6,9 +6,7 @@
  */
 int main(void)
 {
-	int digit;
-	int number;
-	int figure;
+	int digit, number, figure;
 
 	for (digit = '0'; digit <= '9'; digit++)
 	{
@@ -22,11 +20,13 @@ int main(void)
 					putchar(number);
 					putchar(figure);
 
-					if (digit != '7')
+					if (digit == '7' && number == '8' && figure == '9')
 					{
-						putchar(',');
-						putchar(' ');
+						break;
 					}
+					
+					putchar(',');
+					putchar(' ');
 				}
 			}
 
