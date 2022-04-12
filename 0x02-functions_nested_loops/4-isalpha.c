@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_islower - function that checks for alphabetic character
+ *_isalpha - function that checks for alphabetic character
  *
  *@c: integer parameter for the function -islower
  *
@@ -8,7 +8,13 @@
  */
 int _isalpha(int c)
 {
-	if ((c > 96 && c < 123) || (c > 64 && c < 91))
+	char a;
+	char b;
+
+	a = (c > 96 && c < 123);
+	b = (c > 64 && c < 91);
+
+	if (a || b)
 	{
 		return (1);
 	}
