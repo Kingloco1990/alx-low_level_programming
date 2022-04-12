@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include <Main.h>
 /**
  *main - execution and termination of program
  *
