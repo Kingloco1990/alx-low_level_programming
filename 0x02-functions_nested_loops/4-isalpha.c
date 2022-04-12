@@ -8,13 +8,7 @@
  */
 int _isalpha(int c)
 {
-	char a;
-	char b;
-
-	a = (c >= 'a' && c <= 'z');
-	b = (c >= 'A' && c <= 'Z');
-
-	if (a || b)
+	if ( (c >= 'a' && c <= 'z') || c >= 'A' && c < 'Z'))
 	{
 		return (1);
 	}
