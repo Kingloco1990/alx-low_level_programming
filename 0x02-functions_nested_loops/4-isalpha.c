@@ -4,7 +4,7 @@
  *
  *@c: integer parameter for the function -islower
  *
- *Return:  returns 1 for lowercase or uppercase character and 0 for any other character
+ *Return:  returns 1 for alphabetic character and 0 for any other character
  */
 int _isalpha(int c)
 {
@@ -12,9 +12,7 @@ int _isalpha(int c)
 	{
 		return (1);
 	}
-	else if (
-	c > 64 && c < 91
-	)
+	else if (c > 64 && c < 91)
 	{
 		return (1);
 	}
