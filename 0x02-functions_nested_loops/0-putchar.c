@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <Main.h>
+#include <main.h>
 /**
  *main - execution and termination of program
  *
@@ -7,6 +7,16 @@
  */
 int main(void)
 {
-	printf("_putchar\n");
+	char word[] = "_putchar";
+
+	int i;
+
+	for (i = 0; i < 8; i++)
+	{
+		putchar(word[i]);
+	}
+
+	putchar('\n');
+
 	return (0);
 }
