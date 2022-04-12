@@ -11,8 +11,8 @@ int _isalpha(int c)
 	char a;
 	char b;
 
-	a = (c > 96 && c < 123);
-	b = (c > 64 && c < 91);
+	a = (c >= 'a' && c <= 'z');
+	b = (c >= 'A' && c <= 'Z');
 
 	if (a || b)
 	{
