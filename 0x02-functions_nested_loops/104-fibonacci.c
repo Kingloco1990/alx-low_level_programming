@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main -execution and termination of program
- * 
+ *
  * Return: ends the main program
  */
 int main(void)
