@@ -4,7 +4,7 @@
  *                    
  * @n: The value whose times table is printed
  */
-void print_times_table(int n)
+void print_times_table(int)
 {
 	int nn, mm, pp;
 
