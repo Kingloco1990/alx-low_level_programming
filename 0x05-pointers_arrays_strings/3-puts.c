@@ -4,6 +4,7 @@
  * _puts - prints a string to stdout
  *
  * @str - a string
+ *
  */
 
 void _puts(char *str)
