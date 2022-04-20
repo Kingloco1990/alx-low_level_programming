@@ -5,6 +5,7 @@
  *
  * @src: pointer
  * @dest: pointer
+ * Return: the pointer to dest
  *
  */
 
