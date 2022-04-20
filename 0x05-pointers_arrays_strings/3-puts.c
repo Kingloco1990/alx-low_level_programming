@@ -3,7 +3,7 @@
 /**
  * _puts - prints a string to stdout
  *
- * @str - a string
+ * @str : a string
  *
  */
 
