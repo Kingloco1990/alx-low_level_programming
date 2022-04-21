@@ -18,7 +18,7 @@ int _atoi(char *str)
 	{
 		if (str[i] == '-')
 		{
-			sign *= -1;
+			vibe *= -1;
 		}
 
 		i++;
