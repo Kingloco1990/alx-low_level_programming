@@ -9,9 +9,9 @@
  *
  */
 
-int _atoi(char *s)
+int _atoi(char *str)
 {
-	int sign = 1, i = 0;
+	int vibe = 1, i = 0;
 	unsigned int tr = 0;
 
 	while (!(str[i] <= '9' && str[i] >= '0') && str[i] != '\0')
@@ -29,6 +29,6 @@ int _atoi(char *s)
 		i++;
 	}
 
-	tr *= sign;
+	tr *= vibe;
 	return (tr);
 }
