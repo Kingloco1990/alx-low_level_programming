@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	int ascii = 2772, k = 0, b, random;
+	int ascii = 2772, a = 0, b, random;
 	char password[100];
 	time_t t;
 
@@ -20,21 +20,21 @@ int main(void)
 	while (ascii > 126)
 	{
 		random = rand() % 126;
-		password[k] = random;
+		password[a] = random;
 		ascii -= random;
-		k++;
+		a++;
 	}
 
 	if (ascii > 0)
 	{
-		password[k] = ascii;
+		password[a] = ascii;
 	}
 	else
 	{
-		k--;
+		a--;
 	}
 
-	for (b = 0; b <= k; b++)
+	for (b = 0; b <= a; b++)
 	{
 		printf("%c", password[b]);
 	}
