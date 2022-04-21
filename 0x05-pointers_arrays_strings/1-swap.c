@@ -2,15 +2,18 @@
 
 /**
  * swap_int - swaps the values of two integers
- * @i: integer
- * @k: integer
+ *
+ * @a: first integer
+ * @b: second integer
+ * Return: nothing
+ *
  */
 
-void swap_int(int *i, int *k)
+void swap_int(int *a, int *b)
 {
-	int l;
+	int r;
 
-	l = *i;
-	*i = *k;
-	*k = l;
+	r = *a;
+	*a = *b;
+	*b = r;
 }
