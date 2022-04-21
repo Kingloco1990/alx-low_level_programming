@@ -5,7 +5,7 @@
  *
  * @str: a string
  *
- * Retrun: Nil
+ * Return: Nil
  *
  */
 
