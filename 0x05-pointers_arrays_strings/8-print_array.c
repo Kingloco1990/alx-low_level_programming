@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * print_array - prints n elements of an array of integers, followed by a new line
+ * print_array - prints n elements of an array of integers
  *
- * @i: array to be printed
- * @k: number of elements of the array to be printed
+ * @a: array to be printed
+ * @n: number of elements of the array to be printed
  * Return: nothing
  */
 
