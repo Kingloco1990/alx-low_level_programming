@@ -30,6 +30,7 @@ char *cap_string(char *s)
 				{
 					k = 1;
 				}
+
 				j++;
 			}
 
@@ -41,5 +42,6 @@ char *cap_string(char *s)
 
 		i++;
 	}
+
 return (s);
 }
