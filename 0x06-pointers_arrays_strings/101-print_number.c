@@ -3,8 +3,8 @@
 /**
  * print_number - prints an integer
  *
- * @n: the integer to be printed
- * Return: integer
+ * @n: integer to be printed
+ * Return: nothing
  */
 
 void print_number(int n)
@@ -16,18 +16,12 @@ void print_number(int n)
 		_putchar('-');
 		n *= -1;
 	}
-
 	if (n == 0)
-	{
 		_putchar('0');
-	}
-
 	else
 	{
 		while ((n / i) >= 10)
-		{
 			i *= 10;
-		}
 
 		while (i > 0)
 		{
