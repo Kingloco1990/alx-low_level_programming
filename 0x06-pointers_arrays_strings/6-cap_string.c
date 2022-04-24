@@ -24,7 +24,7 @@ char *cap_string(char *s)
 			j = 0;
 			k = 0;
 
-			while (check == 0 && j < 13)
+			while (k == 0 && j < 13)
 			{
 				if (s[i - 1] == a[j])
 				{
