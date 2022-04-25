@@ -4,10 +4,9 @@
 #include <math.h>
 
 /**
- * main - execution and termination of code
+ * main - generates random valid passwords for 101-crackme
  *
- * Return: ends the main funtion
- *
+ * Return: ends the main funtion (always 0)
  */
 
 int main(void)
