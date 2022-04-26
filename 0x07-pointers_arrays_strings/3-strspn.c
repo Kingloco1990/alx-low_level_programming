@@ -20,5 +20,5 @@ unsigned int _strspn(char *s, char *accept)
 			else
 				if (j == k - 1)
 					goto exit;
-exit: return (len);
+exit: return (l);
 }
