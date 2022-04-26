@@ -3,8 +3,8 @@
 /**
  * set_string - sets the value of a pointer to a char
  * @s: double pointer to a string
- * @to: pointer to the string
- * Return: nothing
+ * @to: pointer to the string to set s to
+ * Return: Nil
  */
 void set_string(char **s, char *to)
 {
