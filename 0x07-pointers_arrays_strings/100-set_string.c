@@ -6,6 +6,7 @@
  * @to: pointer to the string
  * Return: nothing
  */
+
 void set_string(char **s, char *to)
 {
 	*s = to;
