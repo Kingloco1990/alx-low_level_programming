@@ -7,7 +7,7 @@
  * @y: integer to count length
  * Return: On success 1.
  */
-int palind2(char *x, int l)
+int palind2(char *x, int y)
 {
 	if (*x == 0)
 		return (y - 1);
@@ -21,7 +21,7 @@ int palind2(char *x, int l)
  * Return: On success 1.
  */
 
-int palind3(char *x, int l)
+int palind3(char *x, int y)
 {
 	if (*x != *(x + y))
 		return (0);
