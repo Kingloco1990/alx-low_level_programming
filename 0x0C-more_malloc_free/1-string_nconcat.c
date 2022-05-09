@@ -7,7 +7,7 @@
  *
  * @s1: first string
  * @s2: second string
- * @n: n bytes of second string 
+ * @n: n bytes of second string
  * Return: pointer to allocated memory of s1 + nbytes of s2
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
