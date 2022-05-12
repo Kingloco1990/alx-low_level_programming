@@ -4,7 +4,7 @@
 /**
  * free_dog - frees dog
  *
- * @d:pointer
+ * @d: pointer to typedef dog_t
  */
 
 void free_dog(dog_t *d)
