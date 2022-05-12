@@ -4,10 +4,10 @@
 /**
  * struct dog - a new defined type
  *
- * @name: name of dog
- * @age: age of dog
- * @owner: name of owner
- * Description: a new type that contains dog name, age, and owner
+ * @name: pointer to the varible name (string)
+ * @age: float variable for storng age
+ * @owner: pointer to the variable owner (string)
+ * Description: a type containing name, age, and owner variables
  */
 
 typedef struct dog
