@@ -1,38 +1,43 @@
 #include <stdio.h>
+
 /**
  *main - execution and termination of program
  *
  *Return: ends main function
  */
+
 int main(void)
 {
-	int digit, number, figure;
+	int i;
+	int j;
+	int k;
 
-	for (digit = '0'; digit <= '9'; digit++)
+	for (i = 48; i <= 57; i++)
 	{
-		for (number = '0'; number <= '9'; number++)
+		for (j = 49; j <= 57; j++)
 		{
-			for (figure = '0'; figure <= '9'; figure++)
+			for (k = 50; k <= 57; k++)
 			{
-				if (digit < number && number < figure)
+				if ((i == j) || (j == k))
 				{
-					putchar(digit);
-					putchar(number);
-					putchar(figure);
-
-					if (digit == '7' && number == '8' && figure == '9')
-					{
-						break;
-					}
-
-					putchar(',');
-					putchar(' ');
+					continue;
 				}
+				if ((i > j) || (j > k))
+				{
+					continue;
+				}
+				putchar(i);
+				putchar(j);
+				putchar(k);
+				if ((i == 55) && (j == 56) && (k == 57))
+				{
+					break;
+				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
