@@ -43,3 +43,21 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	return (kk);
 }
+
+/**
+ * create_new_node - Creates a new node
+ * @n: Value to add to new node
+ * Return: A pointer to a node
+ */
+listint_t *create_new_node(int n)
+{
+	listint_t *kk;
+
+	kk = malloc(sizeof(listint_t));
+	if (kk == NULL)
+		return (NULL);
+	kk->n = n;
+	kk->next = NULL;
+
+	return (kk);
+}
