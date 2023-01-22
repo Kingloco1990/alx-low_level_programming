@@ -50,7 +50,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; s2[i] != '\0'; i++)
 	{
-		str[str_index++] = s2[i]
+		str[str_index++] = s2[i];
 	}
 
 	return (str);
