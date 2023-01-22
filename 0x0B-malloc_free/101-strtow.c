@@ -79,7 +79,6 @@ char **strtow(char *str)
 		letters = word_index(str + i);
 
 		strings[j] = malloc(sizeof(char) * (letters + 1));
-
 		if (strings[j] == NULL)
 		{
 			for (; j >= 0; j--)
