@@ -64,12 +64,10 @@ char **strtow(char *str)
 		return (NULL);
 
 	words = num_words(str);
-
 	if (words == 0)
 		return (NULL);
 
-	strings = malloc(sizeof(char *) * (words));
-
+	strings = malloc(sizeof(char *) * (words + 1));
 	if (strings == NULL)
 		return (NULL);
 
@@ -88,15 +86,12 @@ char **strtow(char *str)
 				free(strings[j]);
 
 			free(strings);
-
 			return (NULL);
 		}
-
+		
 		for (k = 0; k < letters; k++)
-		{
-			strings[j][k] = str[i];
-			i++;
-		}
+			strings[j][k] = str[i++];
+
 		strings[j][k] = '\0';
 	}
 	strings[j] = NULL;
