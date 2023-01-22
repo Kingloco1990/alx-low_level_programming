@@ -2,40 +2,56 @@
 # include <stdlib.h>
 
 /**
- *str_concat - concatenates two strings
+ * str_concat - Concatenates two strings.
+ * @s1: The string whose end will be appended.
+ * @s2: The string to be concatenated to s1.
  *
- *@s1: first string
- *@s2: second string
- *Return: pointer to a string
-*/
+ * Return: On failure, NULL is returned
+ *         Otherwise, a pointer to the newly allocated space in memory
+ *         containing the concatenated string
+ */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *s;
-	int i = 0, j = 0, k = 0;
+	int i, str_index = 0, len = 0;
+	char *str;
 
-	if (s1 != NULL)
-		for (; s1[i]; i++)
-		;
-	if (s2 != NULL)
-		for (; s2[j]; j++)
-		;
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
 
-	s = malloc(sizeof(char) * (i + j + 1));
-	if (s == NULL)
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		len++;
+	}
+
+	for (i = 0; s2[i] != '\0'; i++)
+	{
+		len++;
+	}
+
+	str = malloc(sizeof(char) * len);
+
+	if (str == NULL)
+	{
 		return (NULL);
-
-	while (k < i)
-	{
-		s[k] = s1[k];
-		k++;
 	}
 
-	while (k < i + j)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		s[k] = s2[k - i];
-		k++;
+		str[str_index++] = s1[i];
 	}
-	s[k] = '\0';
-	return (s);
+
+	for (i = 0; s2[i] != '\0'; i++)
+	{
+		str[str_index++] = s2[i]
+	}
+
+	return (str);
 }
