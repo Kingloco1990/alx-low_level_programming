@@ -87,7 +87,7 @@ char **strtow(char *str)
 			free(strings);
 			return (NULL);
 		}
-		
+	
 		for (k = 0; k < letters; k++)
 			strings[j][k] = str[i++];
 
