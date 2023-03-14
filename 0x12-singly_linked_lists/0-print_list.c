@@ -16,7 +16,7 @@ size_t print_list(const list_t *h)
 
 	while (h != NULL)
 	{
-		printf("[%d] %s\n", c->len, c->str);
+		printf("[%d] %s\n", h->len, h->str);
 		num_nodes++;
 		h = h->next; /*updates the h pointer to point to the next node in the list*/
 	}
