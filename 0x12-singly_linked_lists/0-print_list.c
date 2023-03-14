@@ -18,7 +18,7 @@ size_t print_list(const list_t *h)
 	{
 		printf("[%d] %s\n", c->len, c->str);
 		num_nodes++;
-		h = h->next;
+		h = h->next; /*updates the h pointer to point to the next node in the list*/
 	}
 
 	return (num_nodes);
