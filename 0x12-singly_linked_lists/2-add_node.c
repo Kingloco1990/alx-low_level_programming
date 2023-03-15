@@ -1,45 +1,42 @@
 #include "lists.h"
 
 /**
- * _strlen - lenght of string
- * @s:char
- * Return:int
- */
-unsigned int _strlen(char *s)
-{
-	int i;
-
-		for (i = 0; s[i] != '\0'; i++)
-		{
-			continue;
-		}
-return (i);
-}
-/**
- * add_node - adding node
- * @head:last node list
- * @str:string
- * Return:new node created
+ * add_node - Adds a new node at the beginnig of a list_t list.
+ * @head: A double pointer to the head of the list_t list.
+ * @str: A string.
+ *
+ * Return: The address of the newly added node
+ *         or NULL if function fails.
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
+	char *s;
+	list_t *new_node;
+	int i = 0;
 
-	if (str == NULL)
+	/*Allocates memory on the heap for data of type list_t*/
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
-new = malloc(sizeof(list_t));
-	if (new == NULL)
+
+	s = strdup(str);
+
+	if (s == NULL)
 	{
+		free(new_node);
 		return (NULL);
 	}
-new->str = strdup(str);
-	if (new->str == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-new->len = _strlen(new->str);
-new->next = *head;
-*head = new;
-return (new);
+
+	while (str[i])
+		i++;
+
+	/*Set the values of the structure*/
+	new_node->str = s;
+	new_node->len = i;
+	/*Should point to the address of the previously created node*/
+	new_node->next = *head;
+
+	*head = new_node; /*Double pointer pointing to the new node*/
+
+	return (new_node);
 }
