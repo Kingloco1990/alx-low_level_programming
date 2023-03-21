@@ -2,8 +2,8 @@
 
 /**
  * print_list - Prints all the elements of a list_t list.
- *
  * @h: Pointer to the list_t list.
+ *
  * Return: Number of nodes in the list.
  */
 
