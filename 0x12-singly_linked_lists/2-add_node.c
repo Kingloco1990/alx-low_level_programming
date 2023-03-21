@@ -27,9 +27,11 @@ list_t *add_node(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
-
-	while (s[len])
-		len++;
+	else
+	{
+		while (s[len])
+			len++;
+	}
 
 	/*Set the values of the structure*/
 	new_node->str = s;
