@@ -1,55 +1,50 @@
 #include "lists.h"
 
 /**
- * _strlen - lenght of string
- * @s:char
- * Return:int
- */
-unsigned int _strlen(char *s)
-{
-	int i;
-
-		for (i = 0; s[i] != '\0'; i++)
-		{
-			continue;
-		}
-return (i);
-}
-/**
- * add_node_end - add new node at the end of the list
- * @head:pointer to ponter to lined list
- * @str : ponter to string inside the list
- * Return:pointer to a node at the end of the list
+ * add_node_end - Add a new node at the end of the list.
+ * @head: Pointer to the ponter pointing to the first node
+ *        of the list.
+ * @str: Ponter to the string in a node.
+ *
+ * Return: Address of the new node of NULL if the
+ *         function fails.
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *last;
+	list_t *new, *temp;
+	char *s;
+	int len;
 
-	if (str == NULL)
-		return (NULL);
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
-	new->str = strdup(str);
-	if (new->str == NULL)
-	{
-		free(new);
+
+	s = strdup(str);
+	if (s == NULL)
 		return (NULL);
-	}
-	new->len = _strlen(new->str);
-	new->next = NULL;
-	if (*head == NULL)
-	{
-		*head = new;
-	}
 	else
 	{
-	last = *head;
-		while (last->next)
+		while (s[len])
 		{
-		last = last->next;
+			len++;
 		}
-	last->next = new;
 	}
+
+	new->str = s;
+	new->len = len;
+	new->next = NULL;
+
+	if (*head == NULL)
+		*head = new;
+	else
+	{
+		temp = *head;
+
+		while (temp->next != NULL)
+			temp = temp->next;
+
+		temp->next = new;
+	}
+
 	return (new);
 }
