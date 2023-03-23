@@ -21,7 +21,10 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	s = strdup(str);
 	if (s == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 	else
 	{
 		while (s[len])
