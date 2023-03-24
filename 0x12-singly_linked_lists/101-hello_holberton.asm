@@ -12,8 +12,8 @@ main:		; program label for entry point
 	mov rdx,17	; Length of buffer
 	syscall
 
-	mov rax,60
-	mov rdi,0
+	mov rax,60	; Exit code (successful termination of a program)
+	mov rdi,0	; Exit program with no error
 	syscall
 
 section .data	; Data section
