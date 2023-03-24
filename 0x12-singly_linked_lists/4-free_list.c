@@ -2,7 +2,7 @@
 
 /**
  * free_list - Frees a list_t list.
- * @head: A pointer to the first node of the list.
+ * @head: Pointer to the first node of the list.
  *
  * Return: Nothing.
  */
