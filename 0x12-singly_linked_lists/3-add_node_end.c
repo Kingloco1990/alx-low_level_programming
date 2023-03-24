@@ -4,7 +4,7 @@
  * add_node_end - Add a new node at the end of the list.
  * @head: Pointer to the ponter pointing to the first node
  *        of the list.
- * @str: Ponter to the string in a node.
+ * @str: String to be added to the new node.
  *
  * Return: Address of the new node of NULL if the
  *         function fails.
@@ -17,7 +17,9 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
+	{
 		return (NULL);
+	}
 
 	s = strdup(str);
 	if (s == NULL)
@@ -25,10 +27,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(new);
 		return (NULL);
 	}
-	else
+	while (s[len])
 	{
-		while (s[len])
-			len++;
+		len++;
 	}
 
 	new->str = s;
@@ -36,13 +37,17 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->next = NULL;
 
 	if (*head == NULL)
+	{
 		*head = new;
+	}
 	else
 	{
 		temp = *head;
 
 		while (temp->next != NULL)
+		{
 			temp = temp->next;
+		}
 
 		temp->next = new;
 	}
