@@ -1,38 +1,48 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - Deletes a node at a specific index
- * @head: Pointer to the beginning of the list
- * @index: Index of the node to be freed
- * Return: 1 if susccessful, -1 if it fails
+ * delete_nodeint_at_index - Deletes the node at a given
+ *                           index of a listint_t list.
+ * @head: A pointer to a pointer that points to the first
+ *        node of the listint_t list.
+ * @index: The index of the node to be deleted (it starts at 0).
+ *
+ * Return: 1 if successful of
+ *        -1 if not successful.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int k;
-	listint_t *j;
-	listint_t *b;
+	listint_t *temp, *hold;
+	unsigned int i = 0;
 
-	j = *head;
-	if (head == NULL || *head == NULL)
+	temp = *head;
+
+	if (temp == NULL)
+	{
 		return (-1);
-	for (k = 0; k < index - 1 && j != NULL && index != 0; k++)
-		j = j->next;
-	if (j == NULL)
-		return (-1);
+	}
+
 	if (index == 0)
 	{
-		b = j->next;
-		free(j);
-		*head = b;
+		*head = (*head)->next;
+		free(temp);
+		return (1);
 	}
-	else
+
+	while (i < (index - 1))
 	{
-		if (j->next == NULL)
-			b = j->next;
-		else
-			b = j->next->next;
-		free(j->next);
-		j->next = b;
+		if (temp->next == NULL)
+		{
+			return (-1);
+		}
+
+		temp = temp->next;
+		i++;
 	}
+
+	hold = temp->next;
+	temp->next = hold->next;
+	free(hold);
+
 	return (1);
 }
