@@ -20,14 +20,15 @@ size_t print_listint_safe(const listint_t *head)
 	while (head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
-		len++;
 		temp = head;
 		head = head->next;
+		len++;
 
 
 		if (temp <= head)
 		{
 			printf("-> [%p] %d\n", (void *)head, head->n);
+			return (len);
 			exit(98);
 		}
 	}
