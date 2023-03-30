@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number
+ * print_binary - Prints the binary representation of a number.
+ * @n: The number to be printed in binary.
  *
- * @n: number to print in binary
+ * Return: Nothing.
  */
-
 void print_binary(unsigned long int n)
 {
-	int k, num = 0;
-	unsigned long int first;
+	int mask, i;
 
-	for (k = 63; k >= 0; k--)
+	mask = 1 << 63;
+
+	for (i = 0; i < 64; i++)
 	{
-		first = n >> k;
-		if (first & 1)
-	{
-		_putchar('1');
-		num++;
+		if ((n & mask) == mask)
+		{
+			_putchar('1');
+		}
+		else
+		{
+			_putchar('0');
+		}
+		mask >>= 1;
 	}
-	else if (num)
-		_putchar('0');
-	}
-	if (!num)
-		_putchar('0');
 }
