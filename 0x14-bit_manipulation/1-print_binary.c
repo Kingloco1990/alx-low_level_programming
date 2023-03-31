@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	unsigned long int bin;
 	int i, num = 0;
 
-	for (i = 63; i >= 0; i--)
+	for (i = 32; i >= 0; i--)
 	{
 		bin = n >> i;
 
@@ -25,6 +25,7 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 		}
 	}
+
 	if (num == 0)
 	{
 		_putchar('0');
