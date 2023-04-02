@@ -1,17 +1,21 @@
 #include "main.h"
 
 /**
- * clear_bit - sets the value of a bit to 0 at a given index.
+ * clear_bit - Sets the value of a bit to 0 at a given index.
+ * @n: Pointer to an integer that will be converted into a binary
+ *     (bits) in the process.
+ * @index: The index, starting from 0 of the bit you want to set.
  *
- * @n: pointer to the number to change
- * @index: index of the bit to clear
- * Return: 1 for success, -1 for failure
+ * Return: 1 if it worked, or -1 if an error occurred.
  */
-
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	if (index > 63)
+	{
 		return (-1);
-	*n = (~(1UL << index) & *n);
+	}
+
+	*n = (*n & ~(1 << index));
+
 	return (1);
 }
