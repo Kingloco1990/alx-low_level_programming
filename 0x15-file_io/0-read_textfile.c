@@ -17,11 +17,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t file, fread, fwrite;
 	char *num_lets;
 
+	if (filename == NULL)
+	{
+		return (0);
+	}
+
 	num_lets = malloc(sizeof(char) * letters);
 	if (num_lets == NULL)
+	{
 		return (0);
-	if (filename == NULL)
-		return (0);
+	}
 
 	file = open(filename, O_RDONLY);
 	if (file == -1)
