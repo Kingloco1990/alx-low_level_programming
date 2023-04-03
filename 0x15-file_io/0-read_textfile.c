@@ -15,15 +15,15 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t file, fread, fwrite;
-	char *num_lets;
+	char *buffer;
 
 	if (filename == NULL)
 	{
 		return (0);
 	}
 
-	num_lets = malloc(sizeof(char) * letters);
-	if (num_lets == NULL)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 	{
 		return (0);
 	}
@@ -31,23 +31,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	file = open(filename, O_RDONLY);
 	if (file == -1)
 	{
-		free(num_lets);
+		free(buffer);
 		return (0);
 	}
 	fread = read(file, num_lets, letters);
 	if (fread == -1)
 	{
-		free(num_lets);
+		free(buffer);
 		return (0);
 	}
 	fwrite = write(STDOUT_FILENO, num_lets, fread);
 	if (fwrite == -1)
 	{
-		free(num_lets);
+		free(buffer);
 		return (0);
 	}
-	
+
 	close(file);
-	free(num_lets);
+	free(buffer);
 	return (fwrite);
 }
