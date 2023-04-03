@@ -34,13 +34,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	fread = read(file, num_lets, letters);
+	fread = read(file, buffer, letters);
 	if (fread == -1)
 	{
 		free(buffer);
 		return (0);
 	}
-	fwrite = write(STDOUT_FILENO, num_lets, fread);
+	fwrite = write(1, buffer, fread);
 	if (fwrite == -1)
 	{
 		free(buffer);
