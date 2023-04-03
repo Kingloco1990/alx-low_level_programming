@@ -11,7 +11,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int len = 0, file, fopen, fwrite;
+	int len = 0, file, fwrite;
 
 	if (filename == NULL)
 	{
