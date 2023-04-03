@@ -14,43 +14,25 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t open_txt, read_txt, write_txt;
-	char *buffer;
+	ssize_t file, fread, fwrite;
+	char *num_lets;
 
+	num_lets = malloc(sizeof(char) * letters);
+	if (num_lets == NULL)
+		return (0);
 	if (filename == NULL)
-	{
 		return (0);
-	}
 
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-	{
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 		return (0);
-	}
-
-	open_txt = open(filename, O_RDONLY);
-	if (open_txt == -1)
-	{
-		free(buffer);
+	fread = read(file, num_lets, letters);
+	if (fread == -1)
 		return (0);
-	}
-
-	read_txt = read(open_txt, buffer, letters);
-	if (read_txt == -1)
-	{
-		free(buffer);
+	fwrite = write(STDOUT_FILENO, num_lets, fread);
+	if (fwrite == -1)
 		return (0);
-	}
-
-	write_txt = write(STDOUT_FILENO, buffer, r);
-	if (write_txt == -1)
-	{
-		free(buffer);
-		return (0);
-	}
-
-	close(open_txt);
-	free(buffer);
-
-	return (write_txt);
+	close(file);
+	free(num_lets);
+	return (fwrite);
 }
