@@ -11,30 +11,33 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t len = 0;
 	listint_t *temp;
+	size_t node, counter = 0;
 
-	if (h == NULL)
+	node = looped_listint_len(*h);
+
+	if (node == 0)
 	{
-		return (0);
-	}
-
-	while (*h != NULL)
-	{
-		len++;
-		temp = *h;
-		*h = (*h)->next;
-
-		if (temp <= (*h))
+		while (*h != NULL && h != NULL)
 		{
-			printf("-> [%p] %d\n", (void *)(*h), (*h)->n);
-			*h = NULL;
-			free(temp);
-			return (len);
+			node++;
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+		}
+	}
+	else
+	{
+		while (counter < node)
+		{
+			counter++;
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;	
 		}
 
-		free(temp);
+		*h = NULL;
 	}
 
-	return (len);
+	return (node);
 }
