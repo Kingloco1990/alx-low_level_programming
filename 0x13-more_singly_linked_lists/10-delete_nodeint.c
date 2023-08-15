@@ -5,7 +5,7 @@
  *                           index of a listint_t list.
  * @head: A pointer to a pointer that points to the first
  *        node of the listint_t list.
- * @index: The index of the node to be deleted (it starts at 0).
+ * @index: The index of the node to be deleted (starts at 0).
  *
  * Return: 1 if successful of
  *        -1 if not successful.
