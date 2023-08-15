@@ -5,8 +5,8 @@
  * @head: A pointer to the pointer that points to the first
  *        node of the listint_t list.
  *
- * Return: The head node’s data (n) or 0 if the linked list
- *         is empty.
+ * Return: The head node’s data (n) or
+ *         0 if the linked list is empty.
  */
 int pop_listint(listint_t **head)
 {
